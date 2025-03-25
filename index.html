@@ -1,136 +1,63 @@
-body {
-    background: #0f0f0f;
-    font-family: 'Arial', sans-serif;
-    color: #FFFFFF;
-    margin: 0;
-    padding: 0;
-}
- 
-#NotAllowedme {
-    display: flex;
-}
- 
-.jd-app {
-    display: flex;
-    width: 100%;
-}
- 
-.sidebar {
-    width: 220px;
-    background-color: #252525;
-    padding: 20px;
-    position: fixed;
-    height: 100%;
-}
- 
-.sidebar h2 {
-    color: #FFFFFF;
-    margin-bottom: 20px;
-}
- 
-.sidebar a {
-    color: #FFFFFF;
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
- 
-.sidebar a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
- 
-.content {
-    margin-left: 240px; /* Leave space for sidebar */
-    padding: 20px;
-    flex-grow: 1;
-}
- 
-.jd-header {
-    text-align: center;
-}
- 
-.title-3d {
-    font-size: 4rem;
-    color: #FFFFFF;
-    text-align: center;
-    perspective: 1000px; /* Create perspective for the 3D effect */
-}
- 
-.title-3d span {
-    display: inline-block;
-    animation: rotate 5s infinite alternate; /* Animation for rotation */
-    transform: rotateY(0deg);
-}
- 
-@keyframes rotate {
-    0% {
-        transform: rotateY(0deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
-}
- 
-.jd-txt {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    background: #212121;
-    border-radius: 3px;
-}
- 
-.tab {
-    display: none; /* Hide all tabs by default */
-}
- 
-.jd-content {
-    margin-top: 20px;
-}
- 
-.jd-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
- 
-.jd-box {
-    width: 150px;
-    height: 150px;
-    background: #000;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    margin: 10px;
-    text-align: center;
-    border-radius: 5px;
-    overflow: hidden;
-}
- 
-.jd-box img {
-    width: 100%;
-    height: auto;
-}
- 
-.jd-box span {
-    display: block;
-    padding: 5px;
-    background: #212121;
-    color: #ffffff;
-    font-size: 0.8rem;
-}
- 
-.jd-video {
-    margin-top: 20px;
-}
- 
-.jd-videoBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
- 
-.jd-videoBox iframe {
-    margin: 10px 0;
-    border: none;
-}
- 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>GIF Gallery</title>
+</head>
+<body>
+    <div id="NotAllowedme"> 
+        <div id="jd-main"> 
+            <div class="jd-app"> 
+                <div class="sidebar">
+                    <h2>Menu</h2>
+                    <a href="javascript:void(0)" onclick="showTab('sell-gif')">Sell GIF</a>
+                    <a href="javascript:void(0)" onclick="showTab('videos')">Videos</a>
+                    <a href="javascript:void(0)" onclick="showTab('about')">About</a>
+                </div>
+                <div class="content">
+                    <div class="jd-header"> 
+                        <h1 class="title-3d">SELL GIF</h1> 
+                        <span class="jd-txt">EDITABLE</span> 
+                    </div> 
+                    <div id="sell-gif" class="tab"> 
+                        <div class="jd-content"> 
+                            <h2>NOVOS GIFS</h2>
+                            <div class="jd-boxes">
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/Cm8Vzg7nTd.gif" /><span>GIF 1</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/Mnug3QlpS.gif" /><span>GIF 2</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/3rFbf2yWV.gif" /><span>GIF 3</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/rLVmB8pD4P.gif" /><span>GIF 4</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/XUfeLnnRE.gif" /><span>GIF 5</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/HXIg9q1muPE.gif" /><span>GIF 6</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/YdxR8b3JM.gif" /><span>GIF 7</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/fx4bkBnbFdO.gif" /><span>GIF 8</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/Y5l9SXxxEz.gif" /><span>GIF 9</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/VrNowpuAC.gif" /><span>GIF 10</span></div> 
+                                <div class="jd-box"><img src="https://img.xatblog.net/image/iF2widRLMWG.gif" /><span>GIF 11</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="videos" class="tab" style="display:none;">
+                        <h2>Videos</h2>
+                        <p>Here you can find a collection of videos.</p>
+                        <div class="jd-video"> 
+                            <span>Musica Que Alegra</span> 
+                            <div class="jd-videoBox"> 
+                                <iframe width="420" height="315" src="https://www.youtube.com/embed/yC98CxnXiuI" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbnymz7vqy" frameborder="0" allowfullscreen></iframe>
+                            </div> 
+                        </div>
+                    </div>
+                    <div id="about" class="tab" style="display:none;">
+                        <h2>About</h2>
+                        <p>This section contains information about the site.</p>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+</body>
+</html>
